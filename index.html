@@ -18,7 +18,17 @@
         <div class="header-logo">
             <a href="header-logo">logo</a>
         </div>
+        <div id="drawer_toggle" class="open"><img src="../camp/image/outline_menu_black.png" alt="ハンバーガーメニュー">
+        </div>
         <div class="nav">
+            <ul>
+                <li>menu</li>
+                <li>point</li>
+                <li>canp</li>
+                <li>vlog</li>
+            </ul>
+        </div>
+        <div class="nav-sp">
             <ul>
                 <li>menu</li>
                 <li>point</li>
@@ -31,7 +41,7 @@
     <div class="top-wrap">
         <p>キャンプを楽しもう。</p>
     </div>
-    
+
     <div class="containar">
         <div class="containar-box-1">
             <div class="containar-box-1-text">
@@ -43,7 +53,7 @@
         </div>
         <div class="containar-box-2">
             <div class="containar-box-2-img">
-                <img src="../image/IMG_0042.png" alt="テントとつき">
+                <img src="../camp/image/IMG_0042.png" alt="テントとつき">
             </div>
             <div class="containar-box-2-text">
                 テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
@@ -54,7 +64,7 @@
                 テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
             </div>
             <div class="containar-box-3-img">
-                <img src="../image/IMG_9271.png" alt="キャンプファイヤー">
+                <img src="../camp/image/IMG_9271.png" alt="キャンプファイヤー">
             </div>
         </div>
     </div>
@@ -63,10 +73,22 @@
         <button class="contents-img" value="もっとみる">もっとみる</button>
     </div>
 
-</body>
+    <footer>
+        <div class="footer-nav"></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
 
-<footer>
-    <div class="footer-nav"></div>
-</footer>
+        $(function () {
+            $("nav-sp").hide();
+            $('#drawer_toggle').on('click', function () {        // js-btnクラスをクリックすると、
+                $('nav-sp').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+            })
+        });
+    
 
-</html>
+</body >
+
+
+</html >
