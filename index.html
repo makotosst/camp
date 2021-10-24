@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">    
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-logo">
-            <a href="header-logo">logo</a>
+            <img src="./image/campyourlife.png" alt="campyourlife">
         </div>
         <div id="drawer_toggle" class="open"><img src="../camp/image/outline_menu_black.png" alt="ハンバーガーメニュー">
         </div>
@@ -42,29 +42,29 @@
         <p>キャンプを楽しもう。</p>
     </div>
 
-    <div class="containar">
-        <div class="containar-box-1">
-            <div class="containar-box-1-text">
+    <div class="main">
+        <div class="main-box-1">
+            <div class="main-box-1-text">
                 テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
             </div>
-            <div class="containar-box-1-img">
-                <img src="../camp/image/IMG_9285.png" alt="テント画像">
+            <div class="main-box-1-img">
+                <img src="./image/IMG_9285.png" alt="テント画像">
             </div>
         </div>
-        <div class="containar-box-2">
-            <div class="containar-box-2-img">
-                <img src="../camp/image/IMG_0042.png" alt="テントとつき">
+        <div class="main-box-2">
+            <div class="main-box-2-img">
+                <img src="./image/IMG_0042.png" alt="テントとつき">
             </div>
-            <div class="containar-box-2-text">
+            <div class="main-box-2-text">
                 テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
             </div>
         </div>
-        <div class="containar-box-3">
-            <div class="containar-box-3-text">
+        <div class="main-box-3">
+            <div class="main-box-3-text">
                 テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
             </div>
-            <div class="containar-box-3-img">
-                <img src="../camp/image/IMG_9271.png" alt="キャンプファイヤー">
+            <div class="main-box-3-img">
+                <img src="./image/IMG_9271.png" alt="キャンプファイヤー">
             </div>
         </div>
     </div>
@@ -81,12 +81,24 @@
     <script>
 
         $(function () {
-            $("nav-sp").hide();
+            $(".nav-sp").hide();
             $('#drawer_toggle').on('click', function () {        // js-btnクラスをクリックすると、
-                $('nav-sp').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+                $('.nav-sp').toggle(1000); // メニューとバーガーの線にopenクラスをつけ外しする    
             })
+
+            $(window).scroll(function (){
+            $('.header-logo, .top-wrap').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 150){
+                $(this).addClass('scrollin');
+            }
         });
+    });        });
     
+    </script>
+
 
 </body >
 
