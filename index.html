@@ -87,15 +87,16 @@
             })
 
             $(window).scroll(function (){
-            $('.header-logo, .top-wrap').each(function(){
+            $('.main-box-1,.main-box-2,.main-box-3').each(function(){
             var elemPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 150){
-                $(".top-wrap").addClass('scrollin');
-            }
+            if (scroll > elemPos - windowHeight){
+            $(".main-box-1,.main-box-2,.main-box-3").addClass('scrollin');
+                    }
+                });
+            });        
         });
-    });        });
     
     </script>
 

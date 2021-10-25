@@ -72,6 +72,7 @@ ul {
     background-repeat: no-repeat;
     z-index: 20;
     text-align: -webkit-center;
+
 }
 
 .top-wrap p {
@@ -90,12 +91,15 @@ ul {
 }
 
 .main-box-1 {
-    width: 100%;
+    width: 85%;
     height: 450px;
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 6% 0 3%;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
 
 .main-box-1-text {
@@ -107,12 +111,15 @@ ul {
 }
 
 .main-box-2 {
-    width: 100%;
+    width: 85%;
     height: 450px;
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 3% 0 3%;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 4000ms; /* フェードインにかかる時間を指定 */
 }
 
 .main-box-2-text {
@@ -130,12 +137,15 @@ ul {
 
 
 .main-box-3 {
-    width: 100%;
+    width: 85%;
     height: 450px;
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 3% 0 6%;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 8000ms; /* フェードインにかかる時間を指定 */
 }
 
 .main-box-3-text {
@@ -144,6 +154,11 @@ ul {
     padding-top: 26px;
     padding-left: 0;
     font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .contents {
