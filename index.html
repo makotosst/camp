@@ -37,7 +37,9 @@
             </ul>
         </div>
     </header>
-
+    <div class="animete-line"></div>
+    <div class="animete-up"></div>
+    <div class="animete-down"></div>
     <div class="top-wrap">
         <p>キャンプを楽しもう。</p>
     </div>
@@ -45,7 +47,7 @@
     <div class="main">
         <div class="main-box-1">
             <div class="main-box-1-text">
-                テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
+                あなたが思い描いた<br>キャンプの想像を
             </div>
             <div class="main-box-1-img">
                 <img src="./image/IMG_9285.png" alt="テント画像">
@@ -56,12 +58,12 @@
                 <img src="./image/IMG_0042.png" alt="テントとつき">
             </div>
             <div class="main-box-2-text">
-                テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
+                より自然的で<br>開放的な空間を
             </div>
         </div>
         <div class="main-box-3">
             <div class="main-box-3-text">
-                テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト<br>テキストテキストテキスト
+                思い出とともに<br>体験として刻まれる。
             </div>
             <div class="main-box-3-img">
                 <img src="./image/IMG_9271.png" alt="キャンプファイヤー">
@@ -86,16 +88,24 @@
                 $('.nav-sp').toggle(1000); // メニューとバーガーの線にopenクラスをつけ外しする    
             })
 
-            $(window).scroll(function (){
-            $('.main-box-1,.main-box-2,.main-box-3').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight){
-            $(".main-box-1,.main-box-2,.main-box-3").addClass('scrollin');
+            $(window).scroll(function () {
+                $('.main-box-1,.main-box-2,.main-box-3').each(function() {
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight) {
+                        $(".main-box-1,.main-box-2,.main-box-3").addClass('scrollin');
                     }
                 });
-            });        
+            });  
+            
+            $(".animete-line").animate({"width":"100%"}),1500,function(){
+                $(".animete-line").css("right",0)
+                $(".animete-line").animate({"width":"0%"}),function(){
+                    $(".animete-up").animate({"height":"0%"})
+                    $(".animete-down").animate({"height":"0%"})
+                }
+            }
         });
     
     </script>
