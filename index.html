@@ -90,22 +90,22 @@
 
             $(window).scroll(function () {
                 $('.main-box-1,.main-box-2,.main-box-3').each(function() {
-                    var elemPos = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
+                    const elemPos = $(this).offset().top;
+                    const scroll = $(window).scrollTop();
+                    const windowHeight = $(window).height();
                     if (scroll > elemPos - windowHeight) {
                         $(".main-box-1,.main-box-2,.main-box-3").addClass('scrollin');
                     }
                 });
             });  
             
-            $(".animete-line").animate({"width":"100%"}),1500,function(){
-                $(".animete-line").css("right",0)
-                $(".animete-line").animate({"width":"0%"}),function(){
+            $(".animete-line").animate({"width":"100%"},1500,function(){
+                $(".animete-line").css("right",0);
+                $(".animete-line").animate({"width":"0%"},function(){
                     $(".animete-up").animate({"height":"0%"})
                     $(".animete-down").animate({"height":"0%"})
-                }
-            }
+                });
+            });
         });
     
     </script>
